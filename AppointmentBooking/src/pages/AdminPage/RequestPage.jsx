@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Layout from '../../Components/Layout';
+import toast from "react-hot-toast";
 export default function RequestPage() {
     const [doctorDetail, setDoctorDetail] = useState([]);
+    const token = localStorage.getItem('token');
+    if (!token) {
+        navigate("/login");
+        return;
+    }
     useEffect(() => {
         const getRequest = async () => {
-            const response = await axios.post("http://localhost:5000/api/admin/getAllRequest")
+            const response = await axios.post("http://localhost:5000/api/user/getAllRequest", {},
+                {
+                    headers: {
+                        Authorization: token,
+                    },
+                });
             setDoctorDetail(response.data);
             //  console.log(response.data);
         }
@@ -13,14 +24,32 @@ export default function RequestPage() {
     }, []
     )
     const denyRequest = async (doctor) => {
-        console.log("clicked");
-        const response = await axios.post("http://localhost:5000/api/admin/denyRequest", doctor);
-        console.log(response.data);
+        try{
+        const response = await axios.post("http://localhost:5000/api/user/denyRequest", doctor,
+            {
+                headers: {
+                    Authorization: token,
+                },
+            });
+        toast.success("Denied Succefully!");
+        }
+        catch(error){
+            toast.error("Something Went Wrong");
+        }
     }
     const acceptRequest = async (doctor) => {
-        console.log("clicked");
-        const response = await axios.post("http://localhost:5000/api/admin/acceptRequest", doctor);
-        console.log(response.data);
+        try{
+        const response = await axios.post("http://localhost:5000/api/user/acceptRequest", doctor,
+            {
+                headers: {
+                    Authorization: token,
+                },
+            });
+        toast.success("Accepted Successfully!")
+        }
+        catch(error){
+            toast.error("Something Went Wrong!")
+        }
     }
     return (
         <Layout>

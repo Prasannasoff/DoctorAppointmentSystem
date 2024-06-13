@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import './DoctorMessage.css'
+import toast from "react-hot-toast";
 function DoctorMessage({ closeModal, User }) {
     const [Message, setMessage] = useState('');
     const sendMessage = async () => {
@@ -9,7 +10,7 @@ function DoctorMessage({ closeModal, User }) {
 
         const userDate = User.date;
         const Doctoruser = JSON.parse(localStorage.getItem('data'));
-        const id=User._id
+        const id = User._id
         const response = await axios.post("http://localhost:5000/api/doctor/acceptAppointment",
             {
                 userEmail,
@@ -28,8 +29,9 @@ function DoctorMessage({ closeModal, User }) {
                 }
             }
         );
-        window.location.reload();
-        console.log(response.data);
+        toast.success(response.data)
+        setTimeout(() => window.location.reload(), 2000);
+
     }
     return (
         <div className="doctorModal">

@@ -1,51 +1,80 @@
+/* applyDoctor.module.css */
+
 .container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h4 {
+.input-container {
     margin-bottom: 15px;
-    color: #333;
 }
 
-.formGroup {
-    margin-bottom: 20px;
-}
-
-.formGroup label {
+.input-container label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    font-weight: bold;
 }
 
-.formGroup input {
-    width: calc(100% - 20px);
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="password"] {
+    width: 100%;
     padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.buttonContainer {
-    text-align: center;
-}
-
-.submitButton {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
     font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.submitButton:hover {
-    background-color: #45a049;
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-container input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-container .ant-time-picker {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+.anchor {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
 }

@@ -3,6 +3,8 @@ import Layout from '../../Components/Layout';
 import { useEffect, useState } from 'react';
 import DoctorMessage from '../../Components/DoctorMessage';
 import axios from 'axios';
+import toast from "react-hot-toast";
+
 import style from '../../styles/doctorAppointments.module.css';
 import { Tag } from 'antd';
 function doctorAppointment() {
@@ -33,11 +35,17 @@ function doctorAppointment() {
     }, []
     )
     const acceptRequest = async (user) => {
+        try {
+            console.log(Doctoruser.firstName)
+            console.log("clicked");
+            setModal(true);
+            setUser(user)
 
-        console.log(Doctoruser.firstName)
-        console.log("clicked");
-        setModal(true);
-        setUser(user)
+        }
+        catch (error) {
+            console.log(error)
+
+        }
 
     }
     const denyRequest = async (user) => {
@@ -59,8 +67,9 @@ function doctorAppointment() {
                 }
             }
         );
-        window.location.reload();
-        console.log(response.data);
+        toast.success(response.data)
+        setTimeout(() => window.location.reload(), 2000);
+
     }
     return (
         <Layout>
@@ -99,8 +108,11 @@ function doctorAppointment() {
 
 
 
-                                        <td>{user.DoctorResponded ? <Tag color="blue" className={style.Tag}>Responded</Tag> : <><button type="button" onClick={() => denyRequest(user)}><Tag color="red" className={style.Tag}>Deny</Tag></button>
-                                            <button type="button" onClick={() => acceptRequest(user)} ><Tag color="green" className={style.Tag}>Accept</Tag></button></>}
+                                        <td>
+                                            <div className={style.doctorButtons}>
+                                                {user.DoctorResponded ? <div className={style.doctorButtonResponded}> Responded </div> : <><button type="button" className={style.doctorButtonDeny} onClick={() => denyRequest(user)}>Deny</button>
+                                                    <button type="button" className={style.doctorButtonAccept} onClick={() => acceptRequest(user)} >Accept</button></>}
+                                            </div>
                                         </td>
                                         <hr />
                                     </tr>

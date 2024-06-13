@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios';
 import './modal.css'
 import moment from 'moment'
+import toast from "react-hot-toast";
+
 function modal({ close, DocDetails, Date, Reason }) {
     const bookRequest = async () => {
         const token = localStorage.getItem("token");
@@ -10,8 +12,8 @@ function modal({ close, DocDetails, Date, Reason }) {
         console.log(data.image);
         console.log(data.phone);
 
-        const image=data.image;
-        const phone=data.phone;
+        const image = data.image;
+        const phone = data.phone;
         const UserDetails = {
             name: data.name,
             email: data.email,
@@ -38,7 +40,7 @@ function modal({ close, DocDetails, Date, Reason }) {
             }
 
             )
-            console.log(response.data);
+
         }
         catch (error) {
             console.log(error);
@@ -65,11 +67,11 @@ function modal({ close, DocDetails, Date, Reason }) {
             }
 
             )
-            console.log(response2.data);
-            // window.location.reload();
+            toast.success("Booked Successfully!")
+            setTimeout(() => window.location.reload(), 3000);
         }
         catch (error) {
-            console.log(error);
+            toast.error("Something Went Wrong!")
         }
 
     }

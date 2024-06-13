@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "npm start",
+    "start": "node server.cjs",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"npm i"
+    "build": "npm install"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

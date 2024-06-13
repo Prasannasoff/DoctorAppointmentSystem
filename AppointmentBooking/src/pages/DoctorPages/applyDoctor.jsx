@@ -4,6 +4,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { TimePicker } from 'antd';
 import { useState } from "react";
+import style from '../../styles/applyDoctor.module.css'
 const ApplyDoctor = () => {
     const [selectedStartTime, setSelectedStartTime] = useState(null);
     const [selectedEndTime, setSelectedEndTime] = useState(null);
@@ -77,53 +78,61 @@ const ApplyDoctor = () => {
         }
     };
     return (
-        <div>
+        <div className={style.container}>
 
 
             <h4>Personal Details :</h4>
-            <div>
+            <div className={style["input-container"]}>
                 <label for="firstName">First Name:</label>
                 <input type="text" id="firstName" name="firstName" required placeholder="your first name" value={firstName}
                     onChange={(e) => { setfirstName(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="phone">Phone No:</label>
                 <input type="text" id="phone" name="phone" placeholder="your contact no" required value={phoneNumber}
                     onChange={(e) => { setphoneNumber(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required placeholder="your email address" value={email}
                     onChange={(e) => { setemail(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required placeholder="your Password" value={password}
                     onChange={(e) => { setpassword(e.target.value) }} />
             </div>
 
             <h4>Professional Details:</h4>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="specialization">Specialization:</label>
                 <input type="text" id="specialization" name="specialization" placeholder="your specialization" required value={specialization}
                     onChange={(e) => { setspecialization(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" placeholder="your Address" required value={address}
                     onChange={(e) => { setaddress(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="experience">Experience:</label>
                 <input type="text" id="experience" name="experience" placeholder="your experience" required value={experience}
                     onChange={(e) => { setexperience(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="feesPerCunsaltation">Fees Per Cunsaltation:</label>
                 <input type="text" id="feesPerCunsaltation" name="feesPerCunsaltation" placeholder="Fee" required value={feesPerCunsaltation}
                     onChange={(e) => { setfeesPerCunsaltation(e.target.value) }} />
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="StartTime">Start Time:</label>
                 <TimePicker
                     value={selectedStartTime}
@@ -134,7 +143,8 @@ const ApplyDoctor = () => {
                     allowClear={false}
                 /><br></br>
             </div>
-            <div>
+            <div className={style["input-container"]}>
+
                 <label for="endTime">End Time:</label>
                 <TimePicker
                     value={selectedEndTime}
@@ -145,9 +155,12 @@ const ApplyDoctor = () => {
                     allowClear={false}
                 />
             </div>
-            <input type="text" className="form-control" placeholder="Enter Image Url" value={image} onChange={(e) => { setImage(e.target.value) }} />
+            <div className={style["input-container"]}>
 
-            <div>
+                <input type="text" className="form-control" placeholder="Enter Image Url" value={image} onChange={(e) => { setImage(e.target.value) }} />
+            </div>
+            <div className={style["input-container"]}>
+
                 <button type="submit" onClick={handleFinish}>Submit</button>
             </div>
 

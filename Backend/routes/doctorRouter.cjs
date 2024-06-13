@@ -182,7 +182,7 @@ router.post('/denyAppointment', async (req, res) => {
 
 
         // Send a success response
-        res.send("Denied Successfully");
+        res.send("Rejected Successfully");
     } catch (error) {
         // Handle errors
         return res.status(400).json({ error });

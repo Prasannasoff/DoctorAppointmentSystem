@@ -30,7 +30,8 @@ const UserSchema = mongoose.Schema({
                 reason: { type: String }
             }
         ],
-        _id: false
+        _id: false,
+        default:[]
     },
     image: {
         type: String, // Assuming you'll store the path to the image file
