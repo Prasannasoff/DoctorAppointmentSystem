@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"npm i"
   },
