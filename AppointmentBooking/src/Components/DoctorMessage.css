@@ -1,0 +1,38 @@
+.doctorModal{
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180vh;
+    height: 100vh;
+    position: fixed;
+    top:0;
+}
+.close{
+    width:40px;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+}
+.containerdoctorModal{
+    background-color: white;
+    padding: 10px;  
+    display: flex;
+    flex-direction: column;
+    width:80vh;
+    height:50vh;
+    border-radius: 10px;
+}
+.maindoctorContent{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+.doctorButton{
+
+    display: flex;
+    gap:1rem;
+}

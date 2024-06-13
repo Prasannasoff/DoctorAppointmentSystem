@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+   
+    font-size: 17px;
+
+}
+
+.container {
+    display: flex;
+    width: 170vh;
+    font-weight: 600;
+    flex-direction: column;
+    
+    
+}
+
+.main {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.heading {
+    font-family: "lato", sans-serif;
+    font-size: 40px
+}
+
+.imageContainer {
+    display: flex;
+
+    align-items: center;
+    gap: 15px;
+
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+.phone {
+    color: #8a8a8a;
+    font-size: 13px;
+}
+
+.userDetails p {
+    margin: 0;
+    /* Ensure no extra spacing is added */
+
+}
+
+.imageContainer img {
+    border-radius: 500%;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+
+.tableContainer {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.tableHead th {
+    border-bottom: 1px solid #dddddd;
+
+    font-weight: 800;
+}
+
+.tableContent {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+
+
+}
+tr:hover {
+    cursor:pointer;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
+th{
+    height: 70px;
+    padding-right: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+td {
+    padding-right: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+
+}
+
+.Tag button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.Tag {
+    width: 5rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}

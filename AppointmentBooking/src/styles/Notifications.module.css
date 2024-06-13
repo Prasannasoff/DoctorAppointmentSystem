@@ -1,0 +1,54 @@
+.container {
+    padding: 20px;
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    width:120vh;
+    margin-top: 20px;
+    
+}
+div{
+    font-size: 20px;
+}
+
+.header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.notificationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.viewDetailsButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.viewDetailsButton:hover {
+    background-color: #0056b3;
+}
+
+.details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
