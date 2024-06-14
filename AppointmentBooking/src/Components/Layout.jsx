@@ -59,7 +59,7 @@ function Layout({ children }) {
     },
     {
       name: "Users",
-      path: "/admin/userslist",
+      path: "/admin/userLists",
       icon: "ri-user-line",
     },
     {
@@ -69,7 +69,7 @@ function Layout({ children }) {
     },
     {
       name: "Doctors",
-      path: "/admin/doctorslist",
+      path: "/admin/doctorLists",
       icon: "ri-user-star-line",
     },
   ];

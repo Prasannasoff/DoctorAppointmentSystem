@@ -14,6 +14,8 @@ import AppointmentsBooked from './pages/UserPage/AppointmentsBooked';
 import Notifications from './pages/UserPage/Notifications';
 import LandingPage from './pages/LandingPage';
 import { Toaster } from 'react-hot-toast';
+import DoctorList from './pages/AdminPage/doctorList'
+import AllUser from './pages/AdminPage/AllUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
@@ -41,6 +43,10 @@ function App() {
 
 
         <Route path="/admin/request" element={<RequestPage />} />
+        <Route path="/admin/userLists" element={<AllUser />} />
+        <Route path="/admin/doctorLists" element={<DoctorList />} />
+
+
 
 
 

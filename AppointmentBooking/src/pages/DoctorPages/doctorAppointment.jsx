@@ -6,7 +6,8 @@ import axios from 'axios';
 import toast from "react-hot-toast";
 
 import style from '../../styles/doctorAppointments.module.css';
-import { Tag } from 'antd';
+import ClipLoader from 'react-spinners/ClipLoader';
+
 function doctorAppointment() {
     const [appointmentDetail, setappointmentDetail] = useState([]);
 
@@ -16,9 +17,10 @@ function doctorAppointment() {
 
     const [modal, setModal] = useState(false);
     const [user, setUser] = useState('');
+    const [loading, setloading] = useState(false);
     useEffect(() => {
         const getRequest = async () => {
-
+            setloading(true);
             const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/doctor/getAllAppointments",
                 {},
                 {
@@ -27,6 +29,7 @@ function doctorAppointment() {
                     }
                 }
             )
+            setloading(false);
             console.log(response.data)
             setappointmentDetail(response.data);
 
@@ -75,6 +78,11 @@ function doctorAppointment() {
         <Layout>
             {modal && <DoctorMessage closeModal={setModal} User={user} />}
             <div className={style.container}>
+                {loading && (
+                    <div className={style.loader_overlay}>
+                        <ClipLoader color="#2AA7FF" size={50} />
+                    </div>
+                )}
                 <p className={style.heading}>Patient Appointment</p>
                 <div className={style.main}>
                     <div className={style.tableContainer}>

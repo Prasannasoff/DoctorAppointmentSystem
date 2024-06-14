@@ -4,18 +4,32 @@
 
 * {
     font-family: "Lato", sans-serif;
-   
+
     font-size: 17px;
 
 }
 
 .container {
     display: flex;
-    width: 170vh;
+    width: 150vh;
     font-weight: 600;
     flex-direction: column;
-    
-    
+
+
+
+}
+
+.loader_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    ;
 }
 
 .main {
@@ -70,7 +84,7 @@
 
 .tableContainer {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    
+
     display: flex;
     flex-direction: column;
 
@@ -89,18 +103,21 @@
 
 
 }
+
 tr:hover {
-    cursor:pointer;
+    cursor: pointer;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
-  }
-th{
+}
+
+th {
     height: 70px;
     padding-right: 80px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 15px;
 }
+
 td {
     padding-right: 80px;
     padding-top: 5px;
@@ -109,44 +126,47 @@ td {
 
 }
 
-.doctorButtonAccept{
+.doctorButtonAccept {
     display: flex;
-    
+
     background-color: rgba(99, 190, 251, 0.436);
-    color:rgb(12, 149, 241);
-    
-    justify-content: center;
-    width:70px;
-    font-size:14px;
-    border-radius: 3px;
-    border:1px solid rgb(0, 153, 255);
-}
-.doctorButtonDeny{
-    display: flex;
-    
+    color: rgb(12, 149, 241);
 
     justify-content: center;
-    width:70px;
-    font-size:14px;
+    width: 70px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid rgb(0, 153, 255);
+}
+
+.doctorButtonDeny {
+    display: flex;
+
+
+    justify-content: center;
+    width: 70px;
+    font-size: 14px;
     background-color: rgba(240, 50, 50, 0.212);
-    color:rgb(238, 43, 43);
-    border:1px solid rgb(238, 43, 43);
+    color: rgb(238, 43, 43);
+    border: 1px solid rgb(238, 43, 43);
     border-radius: 3px;
 }
-.doctorButtons{
-    display:flex;
-    gap:7px
-}
-.doctorButtonResponded{
+
+.doctorButtons {
     display: flex;
-    
+    gap: 7px
+}
+
+.doctorButtonResponded {
+    display: flex;
+
 
     justify-content: center;
-    width:80px;
-    font-size:14px;
+    width: 80px;
+    font-size: 14px;
     background-color: rgba(88, 88, 88, 0.212);
-    color:rgb(0, 0, 0);
-    border:1px solid rgba(0, 0, 0, 0.493);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.493);
     border-radius: 3px;
 
 }

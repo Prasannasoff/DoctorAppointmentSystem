@@ -1,6 +1,7 @@
 import React from 'react'
 import style from '../styles/LandingPage.module.css'
 import { useNavigate } from 'react-router-dom'
+import doctorImage from '../assets/pngimg.com - doctor_PNG16022 (1).png'
 function LandingPage() {
     const navigate = useNavigate();
     return (
@@ -24,7 +25,7 @@ function LandingPage() {
             </div>
 
             <div className={style.right}>
-                <img src="src/assets/pngimg.com - doctor_PNG16022 (1).png"></img>
+                <img src={doctorImage}></img>
                 
                 <div className={style.round}></div>
 

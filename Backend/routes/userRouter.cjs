@@ -140,17 +140,17 @@ router.get('/getAllBookings', async (req, res) => {
         res.send(error);
     }
 })
-router.post('/getNotifications',async(req,res)=>{
-    try{
-    
-    const notifi=await User.findOne({email:req.user.email});
+router.post('/getNotifications', async (req, res) => {
+    try {
 
-    res.send(notifi.Notifications)
-}
-catch(error){
-    res.send(error);
-}
-    
+        const notifi = await User.findOne({ email: req.user.email });
+
+        res.send(notifi.Notifications)
+    }
+    catch (error) {
+        res.send(error);
+    }
+
 })
 router.post('/getAllRequest', async (req, res) => {
 
@@ -185,8 +185,13 @@ router.post('/denyRequest', async (req, res) => {
     }
 
 });
-router.get('/getAllUser',async(req,res)=>{
-    const response=await User.find({});
+router.get('/getAllUser', async (req, res) => {
+    const response = await User.find({});
     res.send(response)
-})
+});
+router.get('/getAllDoctor', async (req, res) => {
+    const response = await Doctor.find({});
+    res.send(response)
+});
+
 module.exports = router
