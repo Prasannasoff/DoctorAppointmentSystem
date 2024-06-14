@@ -11,7 +11,7 @@ export default function RequestPage() {
     }
     useEffect(() => {
         const getRequest = async () => {
-            const response = await axios.post("http://localhost:5000/api/user/getAllRequest", {},
+            const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/getAllRequest", {},
                 {
                     headers: {
                         Authorization: token,
@@ -25,7 +25,7 @@ export default function RequestPage() {
     )
     const denyRequest = async (doctor) => {
         try{
-        const response = await axios.post("http://localhost:5000/api/user/denyRequest", doctor,
+        const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/denyRequest", doctor,
             {
                 headers: {
                     Authorization: token,
@@ -39,7 +39,7 @@ export default function RequestPage() {
     }
     const acceptRequest = async (doctor) => {
         try{
-        const response = await axios.post("http://localhost:5000/api/user/acceptRequest", doctor,
+        const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/acceptRequest", doctor,
             {
                 headers: {
                     Authorization: token,

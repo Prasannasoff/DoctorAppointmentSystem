@@ -11,7 +11,7 @@ function DoctorMessage({ closeModal, User }) {
         const userDate = User.date;
         const Doctoruser = JSON.parse(localStorage.getItem('data'));
         const id = User._id
-        const response = await axios.post("http://localhost:5000/api/doctor/acceptAppointment",
+        const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/doctor/acceptAppointment",
             {
                 userEmail,
                 userDate,

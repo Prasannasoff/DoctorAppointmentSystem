@@ -13,7 +13,7 @@ export default function bookAppointments() {
     const token = localStorage.getItem("token");
     useEffect(() => {
         const getDoctor = async () => {
-            const response = await axios.get("http://localhost:5000/api/user/getAllDoctor",
+            const response = await axios.get("https://doctorappointmentsystem-3.onrender.com/api/user/getAllDoctor",
                 {
                     headers: {
                         Authorization: token

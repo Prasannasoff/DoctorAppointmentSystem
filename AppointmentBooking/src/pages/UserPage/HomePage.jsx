@@ -17,7 +17,7 @@ export default function HomePage() {
       }
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/user/getuser",
+          "https://doctorappointmentsystem-3.onrender.com/api/user/getuser",
           {},
           {
             headers: {

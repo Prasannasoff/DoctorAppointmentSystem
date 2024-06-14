@@ -11,7 +11,7 @@ function AppointmentsBooked() {
         const getData = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/api/user/getAllBookings",
+                    "https://doctorappointmentsystem-3.onrender.com/api/user/getAllBookings",
                     {
                         headers: {
                             Authorization: token

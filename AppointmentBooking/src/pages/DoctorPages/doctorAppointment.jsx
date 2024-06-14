@@ -19,7 +19,7 @@ function doctorAppointment() {
     useEffect(() => {
         const getRequest = async () => {
 
-            const response = await axios.post("http://localhost:5000/api/doctor/getAllAppointments",
+            const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/doctor/getAllAppointments",
                 {},
                 {
                     headers: {
@@ -53,7 +53,7 @@ function doctorAppointment() {
         const userEmail = user.UserDetails.email;
         const userDate = user.date;
         const id = user._id;
-        const response = await axios.post("http://localhost:5000/api/doctor/denyAppointment",
+        const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/doctor/denyAppointment",
             {
                 userEmail,
                 userDate,

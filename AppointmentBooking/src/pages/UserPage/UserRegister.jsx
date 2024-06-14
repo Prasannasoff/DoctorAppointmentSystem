@@ -25,7 +25,7 @@ function UserRegister() {
         };
         try {
             setLoading(true);
-            const response = await axios.post("http://localhost:5000/api/user/register", userData);
+            const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/register", userData);
             setLoading(false);
             if (response.data.success) {
                 toast.success(response.data.message);

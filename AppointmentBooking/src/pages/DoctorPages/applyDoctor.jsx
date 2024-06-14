@@ -39,7 +39,7 @@ const ApplyDoctor = () => {
             }
 
             const res = await axios.post(
-                "http://localhost:5000/api/doctor/register2",
+                "https://doctorappointmentsystem-3.onrender.com/api/doctor/register2",
                 {
                     ...details,
                     workHours: {
@@ -49,7 +49,7 @@ const ApplyDoctor = () => {
                 }
             );
             try {
-                const res2 = await axios.post("http://localhost:5000/api/doctor/doctorRequest", {
+                const res2 = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/doctor/doctorRequest", {
                     ...details,
                     workHours: {
                         startWorkTime: selectedStartTime.format("HH:mm"),

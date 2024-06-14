@@ -16,7 +16,7 @@ export default function HomePage() {
             }
             try {
                 const response = await axios.post(
-                    "http://localhost:5000/api/doctor/getdoctor",
+                    "https://doctorappointmentsystem-3.onrender.com/api/doctor/getdoctor",
                     {}, // Pass an empty object as the request data since the route doesn't require any additional data
                     {
                         headers: {

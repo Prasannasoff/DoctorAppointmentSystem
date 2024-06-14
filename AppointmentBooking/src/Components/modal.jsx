@@ -23,7 +23,7 @@ function modal({ close, DocDetails, Date, Reason }) {
         }
         try {
 
-            const response = await axios.post("http://localhost:5000/api/user/bookAppointment", {
+            const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/bookAppointment", {
                 appointment: {
                     UserDetails,
                     date: AppointmentDate,
@@ -49,7 +49,7 @@ function modal({ close, DocDetails, Date, Reason }) {
 
             const DoctorName = DocDetails.firstName;
             console.log(DoctorName)
-            const response2 = await axios.post("http://localhost:5000/api/user/saveAppointment", {
+            const response2 = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/saveAppointment", {
                 UserDetails,
                 bookings: [{
                     status: 'pending',

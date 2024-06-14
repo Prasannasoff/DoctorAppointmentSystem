@@ -22,7 +22,7 @@ function DoctorLogin() {
 
         try {
             setloading(true);
-            const response = await axios.post("http://localhost:5000/api/doctor/login", user);
+            const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/doctor/login", user);
 
             setloading(false);
             const { token, user: userData } = response.data;

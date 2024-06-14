@@ -12,7 +12,7 @@ function Notifications() {
             const token = localStorage.getItem('token');
 
             try {
-                const response = await axios.post("http://localhost:5000/api/user/getNotifications", {},
+                const response = await axios.post("https://doctorappointmentsystem-3.onrender.com/api/user/getNotifications", {},
                     {
                         headers: {
                             Authorization: token
